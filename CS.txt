@@ -1,0 +1,482 @@
+Information Security
+	Application Security
+	Network Security
+	Data Security
+
+What comes to your mind when you hear term "Cybersecurity"?
+"HACKING"
+
+Wannacry Ransomware Attack - 2017
+Uber Data breach
+AIMS
+
+Consequences of a cyber attack
+1. Personal Data Loss
+2. Financial Loss
+3. Reputation Loss
+4. Loss in business
+
+What can you do to prevent such attacks?
+Cybersecurity Practices
+
+Cybersecurity definition
+
+It is about protecting hardware as well as software components of internet connected assets, with the help of security controls, to mitigate threats.
+
+I have a physical register containing confidential rating data of employees and I want to protect them, is it under Cybersecurity domain? - No
+
+This falls under a broader domain called as Information Security
+
+Information Security deals with protecting any information, be it physical or digital
+When it is digital, you can tell it comes under Cybersecurity
+
+Cybersecurity is a subdomain within Information Security, that specializes on protectig internet connected systems and their data!
+
+Basic Cybersecurity Termiologies
+--------------------------------
+1. Asset
+Refers to anything that needs to be protected from attacks
+Eg- Company laptops, Data, Internal applications, Servers, Employees etc.
+
+2. Threat
+Any possible consequence that can happen if an asset is not protected properly
+Eg - You are standing on airport security check, and you decide to skip that line
+Threat doesnt mean that it is destined to occur!
+Threats can be knowingly or unknowingly
+Eg - Not regularly updating your laptop OS - someone can perform an attack for which no patch has been done in your system
+
+3. Vulnerablity
+Refer to weaknesses/ loop holes within security of a system, that could be exploited!
+Eg - Having an un-updated OS
+Threat is the possible consequence, if a vulnerability is exploited!
+Vulnerability is something that can be exploited, Threat is the outcome if that happens.
+
+4. Security Controls
+Refers to actions/ techniques you use to protect your assets from attacks
+Eg- Patching your laptop regularly, MFA, Using firewalls etc
+
+5. Attack
+Whenever threat becomes real, it is called a cyber attack
+All attacks are threats, but not all threats are attacks!
+
+Basic Cybersecurity Principles
+------------------------------
+1. Principle of Least Privilege
+
+Are we provided administrator access in our laptops? - No
+Why?
+Lets say you have admin access in your infy lap - what all things can you do?
+I might misuse this privilege,which will cause harm to organization
+
+The principle tells that provide users only the basic privileges, that is just enough for them to do their day to day activities.
+
+2. Defense in Depth
+
+You are going for a Goa trip for a week -  you will lock gate, lock all the rooms, lock all the lockers, lock all the room doors.
+
+Cant you just keep the gate alone locked?
+
+Defense in Depth principle emphasises on havng multiple, layered security controls, so that even if one layer is not protectedor or gets attacked, other layers can still be protected!
+
+Security Objectives
+-------------------
+Refer to the minimum set of requirements that should be satisfied by any security solution! (CIA Triad)
+
+1. Confidentiality
+
+Data should remain secret between the permitted parties!
+
+2. Integrity
+
+Data should remain protected from unwanted modifications!
+
+3. Availability
+
+If you are allowed to access a resource, you should be able to access it whenever you want to!
+
+3 supporting security objectives - they support CIA Triad - AAA 
+
+1. Authentication
+
+Process of verifying the identity of someone.
+How a system can authenticate you(identify you)?
+	We use authenticators
+	Eg - Password, Biometrics, OTPs, RFID Tags etc
+
+Any combination of authenticators will be used to successfuly identify someone
+
+Username + Password - sufficient? (1 authenticator)
+Username + Password + OTP - sufficient? (2 authenticators)
+
+We always prefer having multiple authenticators - MFA (Multi factor authentication)
+
+2. Authorization
+
+Checking whether someone has permission to access something or not
+Someone - Subject - one wants access
+Something - Object - resources
+
+Checking if a subject has proper access to an object or not
+
+3. Accountability
+
+People are made responsible for any actions they perform, and they should not deny anything that they have done (non repudiation)
+
+Domains of Cybersecurity
+------------------------
+1. Identity Access Management (IAM)
+2. Infrastructure Security
+	Network Security
+	Endpoint Security (endpoints refer to devices that connect to network)
+3. Governance, Risk and Compliance
+4. Ethical Hacking
+5. Security Operations Center Management - Real time monitoring - they have to mitigate the attacks, prevent, eradicate
+
+Overview of Network Security
+----------------------------
+What do you mean by a Computer network?
+
+Group of computers connected together
+ 
+Why they should be connected?
+
+1. Communication - sending/receiving information
+2. Sharing resources
+
+Lets say there are 5 machines in a network, how will each of these machines identify each other?
+
+Two addresses are provided to machines.
+
+1st one is called as Physical address - MAC address - which is every machine by its manufacturer (the one who creates the Network Interface Card)
+Unique for every machine
+Even if machine is not part of network, you have MAC address
+
+2nd one is called as Logical Address - IP Address - is assigned to a machine, only when they are connected to a network,and this is used to identify other machines within a network
+IP addresses should be also unique between all machines in a network
+
+Why you need a logical address, when physical address is there for every machine and they are unique?
+
+How to know my IP address and MAC address?
+
+If you are a Windows OS user, go to Command Prompt and type ipconfig
+If you are a Linux OS user, go to Terminal and type ifconfig
+
+Network Security Controls
+1. Firewalls
+
+Firewalls are kept at the boundary of two networks (usually an untrusted network and a trusted network), to monitor and filter all the traffic incoming and outgoing and will only allow those traffic , that is permitted to be.
+
+Unless we explicitly write a rule to permit, traffic wont be allowed!
+
+How to write a rule in firewall?
+
+Lets say that My machine wants to send data to Abhay's machine.
+The actual data will be divided into various packets - each packet has two sections - metadata(header), actual data(payload)
+
+Packets wil propagate on the network. Firewall receives these packets, checks the information in packet header, and checks if any corresponding rules are there that allows or denies.
+
+If any rule is present to allow, it allows, else it blocks!
+
+Such a firewall ruleset is called as Access Control List(ACL)
+
+2. Intrusion Detection Systems (IDS)
+
+What is an intrusion?
+Any unauthorized events within a network
+
+IDS will scan network/ host machines to detect if any intrusions are present, if they find intrusions, they will send alerts to the security team for them to invesigate.
+
+Examples of intrusion
+1. Multiple failed logins
+2. System getting slowed down without any reasons suddenly (Virus/worm attack)
+3. Random files getting created without you creating them
+4. File permissions getting changed without you changing
+5. Network slowing down suddenly
+
+How to detect intrusions?
+
+a. Signature Detection
+
+You know the patterns of various attacks - so, if you see any such patterns in your network, it suggests that attack is happening and you will term it as an intrusion.
+
+b. Anomaly Detection
+
+You know the basic behavior of a network - so whenever it deviates from its basic behavior, the tool suspects something wrong, and suspects an intrusion
+
+Examples - Snort IDS, Suricata IDS
+
+3. Demilitarized Zones (No man's area)
+
+I want to access lex.infosysapps.com - where will this app server be present? - It will be within your network
+
+If you block HTTP connections to this network, will anyone be able to access it outside? - NO!
+
+You create a DMZ, and place this server there.
+
+Whenever you want to access resources between public and private networks, create a DMZ and place such resources in DMZ!
+
+How to create a DMZ?
+
+Use 2 firewalls.
+One firewall (called internal firewall) will block HTTP to internal network, another one(called external firewall) will allow HTTP to the DMZ
+
+Overview of Data Security
+-------------------------
+How to ensure Data Confidentiality and Integrity?
+	With the help of Cryptographic techniques
+
+Cryptography is a subdomain of Information Security, that strictly deals with protecting data!
+
+Cryptographic Techniques
+------------------------
+Encryption/ Decryption
+
+Lets say I want to send a secret message to Mithun, and I dont want anyone else to intercept that message. What would you suggest to ensure the same?
+
+First Solution - Create a separate isolated communication channel between both of them, and send all data through that channel
+	Good solution
+	Practically infeasible, theoretically feasible
+
+Second Solution - Hide the data that i want to communicate over some other data, and send that to the receiver
+	Better solution
+	Hiding takes a lot of effort to keep it as secret as possible
+	Steganography - deals with hiding data
+		Image steganography - LaDinci Codes
+		Audio/ Music Steganography
+		Video Steganography
+
+Third solution - Let sender and receiver communicate between themselves only in a language they both can understand, and no one else!
+	Best solution
+	Minimal efforts compared to other solutions
+	Finding a language to talk such that no one else can understand
+
+Encryption - Process of transforming the data to a form, which only the intended receiver can understand!
+
+Decryption - Process of transforming the data received from a sender to its original form - inverse process of decryption
+
+Original Data is getting transformed!
+
+3 terms are associated with Encryption
+
+1. Plaintext
+	Readable data, it is the data that needs to be transformed
+2. Ciphertext
+	Unreadable data, Scrambled data, it is the transformed data
+
+Encryption converts a plaintext to a ciphertext
+
+3. Encryption Algorithm/Cipher
+	Refers to a set of mathematical operations that are fixed per 	algorithm that converts plaintext to ciphertext
+
+Lets say I have a plaintext "Hello", I encrypted it using a cipher, and I got a cipher text "NJKLG".
+Now, if i get this cipher text "NJKLG" anywhere, doesnt that mean that plaintext will be "Hello", if cipher is same?
+	It will be same as mathematical operations are same!
+
+Doesnt that dilute security?  -Yes!
+
+We want to have different output for same input everytime, even if cipher is same, how to achieve this?
+	A randomizing parameter is used for encryption, which ensures that the 	output is randomized
+	This parameter is what we call as "Encryption Key"
+	A key is a binary string of fixed length, prescribed by the cipher
+
+Depending upon how many keys you use, we can classify encryption techniques into 2:
+1. Symmetric encryption
+
+Same key used for encryption, is used for decryption also.
+Examples - AES (Bitlocker), DES, IDEA, Blowfish, Triple DES etc
+
+How to share the key between sender and receiver?
+First solution - create a separate channel for transmitting key
+
+Lets say n people want to communicate with each other, how many channels/connections you need between each of them?
+
+n people, need connections with n-1 people --> n(n-1)
+Assuming channel as bidirective, number of channels required is
+n(n-1)/2 (nC2)
+
+Such a solution is not scalable, as number of users increase, huge number of channels would be needed!
+
+Key management is a major problem in Symmetric encryption
+
+Feasible solution - Key exchange algorithms, which helps in generating same key values in sender and receiver side
+Some set of mathematical operations, when performed on both sender and receiver side, they both will obtain the key for encryption!
+Key exchange algorithms work on asymmetric cryptographic system!
+
+Asymmetric cryptography is used in Symmetric cryptography to exchange keys!!
+
+Why not ask every user to manage their own key? - in such a case, managing keys centrally can be avoided, sending keys can be avoided
+
+2. Asymmetric Encryption
+
+Focuses on eliminating key management, by making every use responsible for managing their keys!
+
+Key used for encryption will be different from the key used for decryption - How is it possible? - MATHEMATICS!!!!
+
+There are two keys for every user - one key is known to everyone (your public key), while other key is only known to themselves (private key)!
+
+There is a mathematical relation between these private-public keys such that, the operations you do with one key, could be inversed with the help of another key
+Prime factorization problem - If i take very large two prime numbers and find  its product and if i give that product to you, you cannot find their prime factors in a computationally feasible time! (RSA Encryption is based on this problem)
+
+How Asymmetric encryption works?
+
+Email analogy
+Sender - me, Sourabh - receiver
+
+1. Obtain email address of Sourabh (Email address is publicly known)
+2. Craft the message
+3. Send the message to email address of Sourabh
+
+At receiver's end,
+1. Sourabh needs to login to mailbox using password (Password is privately known)
+2. Then, he can view the message from me
+
+(DISCLAIMER: email is not public key, password is not private key!!)
+
+Rewrite,
+
+1. Obtain the public key of receiver
+2. Craft the message
+3. Send the message by encrypting with public key of receiver
+
+At receiver's end,
+1. Receiver uses their private key to decrypt
+2. Upon successful, receiver can get original message back
+
+Encryption key- Receiver's public key
+Decryption key - Receiver's private key
+
+It involves lot of mathematical operations, which makes it complex as well as slower compared to symmetric systems!
+
+This is why still we prefer Symmetric encryption over asymmetric encryption for protecting data confidentiality!
+
+Hashing
+
+It is used to ensure data integrity!
+Hashing refers to the process of converting any size, any length data to a fixed size data of an irreversible form with the help of special mathematical functions, called hash functions!
+
+Eg- 1 GB Drive ----- Hash function ----- 256 bit string
+    3 MB Image ----- Hash function ----- 256 bit string
+    1 GB Video ----- Hash function ----- 256 bit string
+
+From the output (hash value), you cannot get back the original data!!!
+Once you hash a data, you cannot get its original form from the hashvalue.
+
+Lets say I want to send a message "Hello" to Sudeesh.
+I obtain the hash value of message " Hello"
+H(Hello) = abc123
+
+I send this sender side hash value to the receiver along with Encrypted data.
+At receiver side, they decrypt the data and they also take the hash value of "Hello"
+H(Hello) = abc123
+
+Lets say that someone in between modified this message to "Hi"
+At receiver side, you receive Hi
+H(Hi) = acb123
+
+Are hash values matching? - NO!
+If they are not matching, it means that the data was tampered!
+
+If hash values match at both sender and receiver sides, it means that the data is untampered!!! (Data integrity is maintained)
+
+What if the string "Hi" also gives same hash value as that of "Hello"?
+Receiver wont be able to detect that tampering has happened - because, hash values are matching!
+
+Your hash function should always generate unique hash values!!!! No two data should generate same hash value!!!!
+Hash Collision - when two data gives same hash value!
+
+If Im sending the hash value in it raw form to receiver, what if someone manipulates the hash value?
+Will hashvalues match? - No
+What will receiver assume? - That data is tampered!
+
+How to send hash value securely to receiver?
+
+Encrypt the hash value! (Assume asymmetric encryption)
+Usually it should be with receiver's public key - but that is already used to encrypt the data that you send
+If you want to encrypt hash value, use sender's private key for encryption, and the receiver will use sender's public key for decryption.
+
+Such an encrypted hash value is what you call as Digital Signature.
+
+Why should we use Sender's keys for digital signature?
+
+We can confirm the authenticity of the message, that the message originated from actual sender and no one inpersonated!
+It confirms non-repudiation because, sender cannot deny that they didnt send message
+
+What if they deny?
+It means that their private key is no longer key, which is not the case ideally
+
+Do you think public keys need to be secured?
+Yes!
+You can verify someone's identity with public keys.
+Lets say if i impersonate your public key, what will happen?
+
+Receiver, when they use my public key for decryption, they will verify my impersonated identity!
+
+We have Certificates for all websites and entities!
+Digital certificates are verified public keys, where your public key is verified by  trusted 3rd party!
+
+Most important application of Hashing is storing passwords securely!
+
+Always store passwords in hashed form, i.e, store hash values of password in DB.
+
+Lets say I'm visiting a web app for first time, I need to sign up
+I will provide a username and password (infy@123)
+Take hash value of password - H(infy@123) = bac123 and store this hash value in DB
+
+Username	|Password
+--------------------------
+reman		|bac123
+
+When i login next time onwards, i will provide my username and password.
+Whatever password i provide in text box, its hash value will be taken and compared with the hash value corresponding to user in DB
+If the hash values match, it means password correct, else incorrect!
+
+You are not storing password in its plaintext form - so, even if someone gets the hash value from DB, will they get your actual password? NO - because hash values are irreversible!!
+
+f(x) = y
+x is the input, y = output
+
+x = plaintext, y=ciphertext
+
+y=E(x)
+x=E-1(y) ----> inverse
+
+Application Security
+--------------------
+To develop any software we use Software Development Life Cycle.
+Waterfall model - Primitive
+Rapid Application Development
+Agile
+DevOps
+DevSecOps ------ You take care of application security in every phase of life cycle
+
+Consider normal SDLC phases, how to incorporate security in each phase?
+
+Requirements Phase
+	Consider security as a Functional Requirements
+	Add security measures for each functionality!
+	Eg - Client wants login page (enforce MFA)
+
+Design Phase
+	Threat Modeling
+	You develop a Data flow diagram in a Threat Modeling Tool
+		OWASP Dragon, Microsoft SDL Threat Modeling Tool
+	From DFD, the tool will automatically suggest potential 	vulnerabilities and ways to mitigate them in each data flow
+
+Coding Phase
+	Secure Coding Practices
+
+Testing Phase
+	Static Application Security testing 
+	Dynamic Application Security Testing (run time)
+
+Deployment Phase
+	Dont use any default accounts in deployed environment
+
+Maintanence Phase
+	Continously monitor for vulnerabilities, proper timely patching of vulnerabilties
+
+Popular Cybersecurity Certifications
+------------------------------------
+CompTIA Security+ or EC Council CEH
+
+CISSP, CISM - Senior folks
